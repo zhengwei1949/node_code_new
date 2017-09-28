@@ -55,10 +55,3 @@ exports.deleteBook = (req,res) => {
         } 
     });
 };
-
-exports.queryWeather = (req,res) => {
-    let cityCode = req.params.id;
-    weather.queryWeather(cityCode,(data)=>{
-        res.json({info : data.weatherinfo});
-    });
-}
